@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li class="active"><a href="{% url 'contact' %}">Contact</a></li>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1 id="community">Community</h1>
+        <p class="lead">Please join our Meetup community: <a href="http://www.meetup.com/DCPython">http://www.meetup.com/DCPython</a>.</p>
+        <h1 id="board">Board</h1>
+        <p class="lead">Please contact the board via email: <a href="mailto:board@dcpython.org">board@dcpython.org</a>.</p>
+        <ul>
+          <li><h4><strong><a href="mailto:aclark@dcpython.org">Alex Clark</a></strong>&nbsp;&mdash;&nbsp;President &amp; Executive Director</h4></li>
+          <li><h4><strong>Matt Bowen</strong>&nbsp;&mdash;&nbsp;Vice President</h4></li>
+          <li><h4><strong>Amy Clark</strong>&nbsp;&mdash;&nbsp;Secretary &amp; Treasurer</h4></li>
+        </ul>
+      </div>
+    </div>
+
+{% endblock %}
