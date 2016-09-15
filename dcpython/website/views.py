@@ -3,13 +3,6 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def home(request):
-    """
-    """
-    context = {}
-    return render(request, 'home.html', context)
-
-
 def about(request):
     """
     """
@@ -29,3 +22,17 @@ def contact(request):
     """
     context = {}
     return render(request, 'contact.html', context)
+
+
+def donate(request):
+    """
+    """
+    context = {}
+    return render(request, 'donate.html', context)
+
+
+def home(request):
+    """
+    """
+    context = {}
+    return render(request, 'home.html', context)

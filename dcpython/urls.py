@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^about$', 'dcpython.website.views.about', name='about'),
     url(r'^andrew-w-singer$', 'dcpython.website.views.andrew_w_singer', name='andrew-w-singer'),
     url(r'^contact$', 'dcpython.website.views.contact', name='contact'),
+    url(r'^donate$', 'dcpython.website.views.donate', name='donate'),
 ]
