@@ -17,6 +17,13 @@ def about(request):
     return render(request, 'about.html', context)
 
 
+def andrew_w_singer(request):
+    """
+    """
+    context = {}
+    return render(request, 'andrew_w_singer.html', context)
+
+
 def contact(request):
     """
     """
