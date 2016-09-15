@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Mission</h1>
+        <p class="lead">We <strong>promote and support</strong> the research, development and use of <strong>Python software in DC</strong>, Maryland &amp; Virginia by organizing and hosting frequent educational events to foster and facilitate academic research, development and learning as well as professional growth and networking.</p>
+        <p class="lead">Some of these <strong>events and services</strong> include but are not limited to:</p>
+        <ul>
+          <li><p><strong>Weekly training sessions</strong> for all levels of Python programming skill.</p></li>
+          <li><p><strong>Monthly presentations</strong> on a variety of technical topics related to Python programming.</p></li>
+          <li><p><strong>Monthly gatherings</strong> to exchange information about Python programming in an informal environment.</p></li>
+          <li><p><strong>Mailing list and job board</strong> to facilitate technical and professional collaboration and exchange.</p></li>
+        </ul>
+      </div>
+    </div>
+
+{% endblock %}
