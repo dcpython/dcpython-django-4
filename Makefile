@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-.DEFAULT_GOAL=git-commit-auto-push
+.DEFAULT_GOAL=dcpython-deploy
 
 APP=app
 MESSAGE="Update"
@@ -241,3 +241,6 @@ vagrant-init:
 	vagrant up --provider virtualbox
 vagrant-up:
 	vagrant up --provision
+
+# DC Python
+dcpython-deploy: git-commit-auto-push heroku-push
