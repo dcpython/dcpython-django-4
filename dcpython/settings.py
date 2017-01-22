@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '_5p4**ykqgj)pdg=$rh_5)uz%sda+d*spbu3a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ['dcpython.org']
+ALLOWED_HOSTS = ['dcpython.org', '127.0.0.1']
 
 # Application definition
 
