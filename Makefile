@@ -331,3 +331,5 @@ vagrant-update:
 # DC Python
 APP=website
 PROJECT=dcpython
+dcpython-heroku-remote:
+	git remote add heroku https://git.heroku.com/dcpython-website.git
