@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^about$', views.about, name='about'),
     url(r'^andrew-w-singer$', views.andrew_w_singer, name='andrew-w-singer'),
+    url(r'^code-of-conduct$', views.coc, name='coc'),
     url(r'^contact$', views.contact, name='contact'),
     url(r'^donate$', views.donate, name='donate'),
 ]

@@ -17,6 +17,13 @@ def andrew_w_singer(request):
     return render(request, 'andrew-w-singer.html', context)
 
 
+def coc(request):
+    """
+    """
+    context = {}
+    return render(request, 'coc.html', context)
+
+
 def contact(request):
     """
     """
