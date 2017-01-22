@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from dcpython.website import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', 'dcpython.website.views.home', name='home'),
-    url(r'^about$', 'dcpython.website.views.about', name='about'),
-    url(r'^andrew-w-singer$', 'dcpython.website.views.andrew_w_singer', name='andrew-w-singer'),
-    url(r'^contact$', 'dcpython.website.views.contact', name='contact'),
-    url(r'^donate$', 'dcpython.website.views.donate', name='donate'),
+    url(r'^$', views.home, name='home'),
+    url(r'^about$', views.about, name='about'),
+    url(r'^andrew-w-singer$', views.andrew_w_singer, name='andrew-w-singer'),
+    url(r'^contact$', views.contact, name='contact'),
+    url(r'^donate$', views.donate, name='donate'),
 ]

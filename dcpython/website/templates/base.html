@@ -13,128 +13,42 @@
     <title>DC Python</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <style>
-        body {
-            padding: 50px 0 50px 0;
-        }
-        nav {
-            background: white !important;
-        }
-        nav a:hover {
-            background: #333 !important;
-            color: white !important;
-        }
-        nav a {
-            color: #333 !important;
-        }
-        li.active a {
-            color: white !important;
-        }
-        .navbar-brand {
-            padding: 6px;
-        }
-        ul.links, ul.links li {
-            list-style-type: none;
-        }
-        .navbar-toggle {
-            background: #333 !important;
-        }
-        #andy-image {
-            margin-right: 1em;
-        }
-        /* DG Stripe Donations */
-        .donor_lvl {
-            background-color: red;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            height: 100px;
-            margin: 10px;
-            border: solid red 5px;
-        }
-        .donor_lvl:hover {
-            cursor: pointer;
-        }
-        .donor_lvl h1 {
-            font-size: 20px;
-            margin: 0px;
-            padding: 0px;
-        }
-        .donor_lvl h2 {
-            font-size: 15px;
-            margin: 0px;
-            padding: 0px;
-        }
-        .platinum {
-            background-color: #f6fafa;
-            border: solid #f6fafa 5px;
-        }
-        .gold {
-            background-color: gold;
-            border: solid gold 5px;
-        }
-        .silver {
-            background-color: silver;
-            border: solid silver 5px;
-        }
-        .bronze {
-            background-color: #C69633;
-            border: solid #C69633 5px;
-        }
-        .donor_lvl.active {
-            border: solid black 5px;
-        }
-    </style>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="{% static 'dcpython-website.css' %}">
   </head>
 
   <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'dcpython-logo-small.png' %}"></a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-{% block nav %}
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-            <li><a href="{% url 'donate' %}">Donate</a></li>
-{% endblock %}
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
     <div class="container">
+      <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" style="border-radius: 0px">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'dcpython-logo-small.png' %}"></a>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'donate' %}">Donate</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-10 offset-md-1">
           <div class="alert alert-warning">
-            <h1>Donations via this website temporarily disabled, please see <a href="https://github.com/DCPython/dcpython-django/issues/95">this GitHub issue</a> or <a href="mailto:board@dcpython.org">email the board</a>.</h1>
+            <h1>Donations via this website temporarily disabled, please see <a href="https://github.com/DCPython/dcpython-django/issues/95">this issue</a> or <a href="mailto:board@dcpython.org">email the board</a>.</h1>
           </div>
         </div>
       </div>
@@ -143,180 +57,26 @@
 {% endblock %}
 
       <hr>
-      <div class="row">
-        <div class="col-md-6">
-          <p>&copy; Copyright 2016, DC Python</p>
-        </div>
-        <div class="col-md-6">
-          <p class="pull-right">In memory of <a href="{% url 'andrew-w-singer' %}">Andrew W. Singer</a></p>
-        <div class="col-md-6">
-      </div>
+
+      <footer>
+          <p class="float-left">&copy; Copyright 2017, DC Python</p>
+          <p class="float-right">In memory of <a href="{% url 'andrew-w-singer' %}">Andrew W. Singer</a></p>
+      </footer>
 
     </div><!-- /.container -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-    <script>
+    <script src="{% static 'dcpython-website.js' %}"></script>
 
-        /* DG Strip Donations */
-
-        /* global jQuery, console, Stripe, window */
-
-        jQuery(function($) {
-            "use strict";
-
-            var DONATION_AMTS = [
-              ["aws", 2500],
-              ["platinum", 1000],
-              ["gold", 500],
-              ["silver", 250],
-              ["bronze", 100],
-              ["individual", 50],
-              ["other", 0]
-            ];
-
-            var DONATION_AMTS_DICT = {
-              aws: 2500,
-              platinum: 1000,
-              gold: 500,
-              silver: 250,
-              bronze: 100,
-              individual: 50,
-              other: 25
-            };
-
-            // DONATION TEXTBOX VALUE CHANGE
-            var handle_donation_change = function() {
-              var i;
-              var donation = parseFloat($("#donationAmt").val());
-              for (i=0; i < DONATION_AMTS.length; i++) {
-                $("." + DONATION_AMTS[i][0]).removeClass("active");
-              }
-              for (i=0; i < DONATION_AMTS.length; i++) {
-                if (donation >= DONATION_AMTS[i][1]) {
-                  $("." + DONATION_AMTS[i][0]).addClass("active");
-                  break;
-                }
-              }
-              $("#id_donation").val(donation);
-            };
-
-            $("#donationAmt").change(handle_donation_change).keyup(handle_donation_change);
-            handle_donation_change();
-            
-            // LEVEL CLICKS
-            var handle_donor_lvl_click = function(e) {
-              var donation = DONATION_AMTS_DICT[$(e.currentTarget).attr("class").split(" ")[1]];
-
-              $("#donationAmt").val(donation);
-              handle_donation_change();
-            };
-
-            $(".donor_lvl").click(handle_donor_lvl_click);
-
-            // DONATION SOURCE CHANGE
-            var handle_donation_source_change = function(e) {
-              var donation_source = $(e.target).val();
-
-              $(".payment-form").addClass("hidden");
-              $("#form-" + donation_source).removeClass("hidden");
-              $("#id_donation_type").val(donation_source);
-            };
-
-
-            $("#donate_source").change(handle_donation_source_change);
-            // need to do this so value is "C" at start
-            $("#id_donation_type").val("C");
-
-            // handle SUBMIT btn
-            window.handle_submit_btn = function() {
-              // first, disable submit button so no bouble submit
-              $("#submit_btn").attr("disabled", "disabled");
-              var donation_amount = $("#donationAmt").val();
-
-              // validate amount first - 1 to 999999.99 dollars 
-              // TODO this is not ideal b/c full form is not validated
-              if (!/^[1-9][0-9]{0,5}(\.[0-9]{1,2})?$/.test(donation_amount)) {
-                $("#donationAmt").parents(".form-group").addClass("has-error");
-
-                $('#error_msg').html("please fix the red errors and resubmit").removeClass('hidden');
-                $("#submit_btn").attr("disabled", null);
-                return false;
-              }
-
-              var donation_type = $("#id_donation_type").val();
-
-              // remove any errors, so can add just existing errors
-              $(".form-group").removeClass("has-error");
-
-              var form;
-
-              if (donation_type == "C") {
-                form = $("#form-C");
-
-                var expiration = $("#card_exp").val().split("/");
-
-                var ccData = {
-                  number: $("#card_number").val(),
-                  exp_month: expiration[0],
-                  exp_year: expiration[1],
-                  cvc: $("#card_cvc").val()
-                };
-
-                Stripe.card.createToken(ccData, function(status, resp) {
-                  if (resp.error) {
-                    var k = resp.error.param;
-                    k = (k.indexOf("exp") >= 0) ? "exp" : k;
-                    $("#card_" + k).parents(".form-group").addClass("has-error");
-                    $("#submit_btn").attr("disabled", null);
-                  } else {
-                    $("#id_cc_token").val(resp.id);
-                    makeAjax();
-                  }
-                });
-
-              } else if (donation_type == "G") {
-                makeAjax();
-              }
-
-              function makeAjax() {
-                // Make AJAX request
-                var data = {};
-                $("#master_donate_form").find("input").each(function(w,x) {
-                  var $x = $(x);
-                  data[$x.attr('name')] = $x.val();
-                });
-                // data = JSON.stringify(data);
-
-                $.post("/make_donation", data, function(resp) {
-                  $('#payment_error').addClass('hidden');
-                  resp = JSON.parse(resp);
-                  if (resp.html) {
-                    $('#error_msg').html("please fix the red errors and resubmit").removeClass('hidden');
-                    $("#master_donate_div").html(resp.html);
-                  } else if (resp.payment_error) {
-                    $('#error_msg').html(resp.payment_error).removeClass('hidden');
-                  } else if (resp.redirect) {
-                    window.location.href = resp.redirect;
-                  }
-                });
-
-                $("#submit_btn").attr("disabled", null);
-              }
-            return false;
-            };
-
-            $("#master_donate_form").submit(window.handle_submit_btn);
-
-          });
-    </script>
+    <script src="https://use.fontawesome.com/0d1964202e.js"></script>
 
   </body>
 </html>
