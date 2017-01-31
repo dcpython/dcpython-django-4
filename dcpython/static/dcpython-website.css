@@ -12,7 +12,7 @@ body {
     margin: 2em 0 2em 0;
 }
 #mission-statement {
-    margin: 2em 0 2em 0 !important;
+    padding: 2em 0 2em 0; 
 }
 
 /* DG Stripe Donations */
