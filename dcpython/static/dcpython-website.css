@@ -3,6 +3,7 @@ body {
 }
 .links {
     margin: 2em 0 2em 0;
+    list-style-type: none;
 }
 #andy-image {
     margin-right: 1em;
