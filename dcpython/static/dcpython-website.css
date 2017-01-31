@@ -5,9 +5,14 @@ body {
     margin: 2em 0 2em 0;
     list-style-type: none;
 }
+.tagline {
+    margin: 2em 0 2em 0;
+}
 #andy-image {
     margin-right: 1em;
 }
+
+
 /* DG Stripe Donations */
 .donor_lvl {
     background-color: red;
